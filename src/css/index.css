@@ -1,0 +1,397 @@
+
+/* ============================= */
+/* CONFIGURAÇÕES GERAIS          */
+/* ============================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+
+    background-image: url("../img/background.webp");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    background-repeat: no-repeat;
+}
+
+
+/* ============================= */
+/* CONTAINER PRINCIPAL            */
+/* ============================= */
+
+#containerPrincipal {
+
+    width: 100%;
+
+    min-height: calc(100vh - 56px);
+
+    padding: 30px;
+
+    display: grid;
+
+    grid-template-columns: 3fr 2fr;
+
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+
+/* ============================= */
+/* FUNDO DOS PAINÉIS              */
+/* ============================= */
+
+.containerfundo {
+
+    background-color: rgba(179, 238, 240, 0.651);
+
+    border-radius: 41px;
+
+}
+
+
+/* ============================= */
+/* PAINEL DO GRÁFICO              */
+/* ============================= */
+
+.containergraficolinhas {
+
+    width: 100%;
+
+    min-height: 500px;
+
+    border-radius: 41px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 30px;
+
+}
+
+
+/* ============================= */
+/* TÍTULO DOS PAINÉIS             */
+/* ============================= */
+
+.containerfundotitulo {
+
+    background-color: #EAEAEA;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    padding: 8px 18px;
+
+    font-weight: bold;
+
+    width: fit-content;
+
+    max-width: 100%;
+}
+
+
+/* ============================= */
+/* ÁREA DO GRÁFICO                */
+/* ============================= */
+
+.ContainerGrafico {
+
+    width: 100%;
+
+    flex: 1;
+
+    min-height: 380px;
+
+    background-color: #EAEAEA;
+
+    border-radius: 30px;
+
+    margin-top: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.textoGrafico {
+
+    font-size: 24px;
+
+    color: #777;
+
+}
+
+
+/* ============================= */
+/* PAINEL DA LISTA                */
+/* ============================= */
+
+.containerlista {
+
+    width: 100%;
+
+    min-height: 500px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* ============================= */
+/* CONTAINER DA TABELA            */
+/* ============================= */
+
+.tabela-container {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    background-color: #EAEAEA;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    overflow-y: auto;
+
+    max-height: 430px;
+}
+
+
+/* ============================= */
+/* TABELA                         */
+/* ============================= */
+
+#tabelatemp {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    text-align: center;
+}
+
+
+/* Cabeçalho */
+
+#tabelatemp th {
+
+    padding: 12px;
+
+    background-color: #d5d5d5;
+
+    border-bottom: 1px solid black;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1;
+}
+
+
+/* Linhas */
+
+#tabelatemp td {
+
+    padding: 10px;
+
+    border-bottom: 1px solid #999;
+}
+
+
+/* Efeito ao passar o mouse */
+
+#tabelatemp tbody tr:hover {
+
+    background-color: #d8f5f5;
+
+}
+
+
+/* ============================= */
+/* BORDA                          */
+/* ============================= */
+
+.borda {
+
+    border: 1px solid black;
+
+}
+
+
+/* ============================= */
+/* RESPONSIVIDADE                 */
+/* ============================= */
+
+/* Tablets */
+
+@media (max-width: 992px) {
+
+    #containerPrincipal {
+
+        grid-template-columns: 1fr;
+
+        padding: 20px;
+
+    }
+
+    .containergraficolinhas,
+    .containerlista {
+
+        min-height: 450px;
+
+    }
+
+}
+
+
+/* Celulares */
+
+@media (max-width: 576px) {
+
+    #containerPrincipal {
+
+        padding: 15px;
+
+        gap: 15px;
+
+    }
+
+
+    .containergraficolinhas,
+    .containerlista {
+
+        padding: 20px;
+
+        border-radius: 25px;
+
+    }
+
+
+    .containerfundotitulo {
+
+        font-size: 14px;
+
+        padding: 7px 12px;
+
+    }
+
+
+    .ContainerGrafico {
+
+        min-height: 300px;
+
+        border-radius: 20px;
+
+    }
+
+
+    #tabelatemp th,
+    #tabelatemp td {
+
+        padding: 8px;
+
+        font-size: 14px;
+
+    }
+
+}
+
+/* ============================= */
+/* NAVBAR                         */
+/* ============================= */
+
+.navbar-custom {
+
+    background-color: rgba(30, 100, 160, 0.75);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+}
+
+
+/* Nome Dashboard */
+
+.navbar-custom .navbar-brand {
+
+    color: white;
+
+    font-weight: bold;
+
+}
+
+
+/* Links */
+
+.navbar-custom .nav-link {
+
+    color: rgba(255, 255, 255, 0.85);
+
+    transition: 0.2s;
+
+}
+
+
+/* Link ao passar o mouse */
+
+.navbar-custom .nav-link:hover {
+
+    color: white;
+
+    background-color: rgba(255, 255, 255, 0.12);
+
+    border-radius: 8px;
+
+}
+
+
+/* Página atual */
+
+.navbar-custom .nav-link.active {
+
+    color: white;
+
+    font-weight: bold;
+
+}
+
+
+/* Botão do menu no celular */
+
+.navbar-custom .navbar-toggler {
+
+    border-color: rgba(255, 255, 255, 0.5);
+
+}
