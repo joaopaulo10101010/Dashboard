@@ -39,17 +39,20 @@ async function carregarSensor(sensorAprocurar) {
     }
 }
 
-function preencherTabela(dados,sensor) {
+function preencherTabela(dados, sensor) {
 
     const tabela = document.querySelector("#tabelatemp tbody");
 
     tabela.innerHTML = "";
+
+    dados.sort((a, b) => b.codigo - a.codigo);
 
     dados.forEach(item => {
 
         const linha = document.createElement("tr");
         const colunaHora = document.createElement("td");
         const colunaValor = document.createElement("td");
+
         const data = new Date(item.horadoregistro);
 
         const hora = data.toLocaleTimeString("pt-BR", {
