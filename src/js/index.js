@@ -69,7 +69,7 @@ function preencherTabela(dados, sensor) {
                 break;
 
             case "BMP280":
-                colunaValor.textContent = item.valorprocessado + "ºC";
+                colunaValor.textContent = item.valorprocessado + "hPa";
                 break;
 
             case "DHT22":
@@ -79,6 +79,10 @@ function preencherTabela(dados, sensor) {
             case "MQ135":
                 colunaValor.textContent = item.valorprocessado + "ppm";
                 break;
+
+            case "LDRTEMP":
+                colunaValor.textContent = item.valorprocessado + "ºC";
+            break;
 
             default:
                 colunaValor.textContent = item.valorprocessado;
